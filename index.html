@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes - Home</title>
+    <style>
+      /* font */
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+      .productsHover {
+        position: relative;
+      }
+
+      .productSub {
+        display: none;
+      }
+
+      .productsHover:hover .productSub {
+        display: block;
+        position: absolute;
+        background-color: #48d1cc;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pri: {
+                100: '#008080',
+              },
+              sec: {
+                100: '#429E9D',
+              },
+              tri: {
+                100: '#48D1CC',
+              },
+              quad: {
+                100: '#E0FFFF',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="overflow-visible">
+    <div id="search" class="hidden">
+      <input
+        class="w-full p-2 px-5 bg-quad-100"
+        type="text"
+        name=""
+        id=""
+        placeholder="Search Here"
+      />
+    </div>
+    <div class="bg-gradient-to-r from-pri-100 via-sec-100 to-tri-100 h-screen">
+      <!-- Header -->
+      <div id="nav_top" class="sticky top-0 z-10">
+        <div class="container m-auto">
+          <div
+            class="relative flex justify-between items-center px-3 lg:px-10 py-3 lg:static"
+          >
+            <!-- Logo -->
+            <div
+              class="font-['Dancing_Script'] text-white text-2xl lg:text-4xl"
+            >
+              Shoes
+            </div>
+
+            <div id="menu_btn" class="text-white text-2xl lg:hidden">
+              &#9776;
+            </div>
+
+            <div
+              id="menu"
+              class="hidden absolute -bottom-56 right-0 bg-sec-100 w-full p-3 shadow text-white lg:flex lg:justify-center lg:items-center lg:space-x-10 lg:bg-transparent lg:shadow-none lg:static lg:w-auto lg:p-0 cursor-pointer"
+            >
+              <ul class="lg:flex">
+                <li class="p-3 hover:text-quad-100"><a href="#">Home</a></li>
+                <li class="productsHover p-3 hover:text-quad-100">
+                  <a href="#">Products</a>
+                  <ul class="productSub lg:mt-3">
+                    <li
+                      class="py-3 px-2 hover:bg-sec-100 hover:text-white text-white"
+                    >
+                      Boys
+                    </li>
+                    <li
+                      class="py-3 px-2 hover:bg-sec-100 hover:text-white text-white"
+                    >
+                      Girls
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-3 hover:text-quad-100"><a href="#">Blog</a></li>
+              </ul>
+
+              <!-- Search -->
+              <div id="search_btn" class="p-3 text-2xl hover:text-quad-100">
+                <ion-icon name="search-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->
+
+      <section class="overflow-hidden text-gray-600 body-font">
+        <div
+          class="container mx-auto flex px-15 xl:px-32 py-2 md:py-24 md:px-9 md:flex-row flex-wrap-reverse justify-center items-center"
+        >
+          <div
+            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+          >
+            <h1
+              class="title-font sm:text-4xl text-2xl mb-4 font-medium text-gray-900"
+            >
+              Before they sold out
+              <br class="hidden lg:inline-block" />readymade gluten
+            </h1>
+            <p class="mb-8 leading-relaxed">
+              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
+              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
+              park mlkshk tote bag selvage hot chicken authentic tumeric
+              truffaut hexagon try-hard chambray.
+            </p>
+            <div class="flex justify-center">
+              <button
+                class="inline-flex text-black bg-tri-100 shadow-lg border-0 py-2 px-6 focus:outline-none hover:bg-sec-100 rounded text-sm md:text-xl"
+              >
+                Previous
+              </button>
+              <button
+                class="ml-4 inline-flex text-gray-700 bg-quad-100 border-0 py-2 px-6 focus:outline-none hover:bg-white rounded text-sm md:text-xl"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-3/6 md:w-1/2 w-3/6">
+            <img
+              id="hero_img"
+              class="object-cover object-center rounded"
+              alt="hero"
+              src="assets/images/pngegg (1).png"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- second section -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container m-auto relative flex">
+        <div class="min-h-screen lg:w-1/3"></div>
+        <div
+          class="hidden w-3/4 min-h-screen bg-quad-100 dark:bg-gray-800 lg:block"
+        ></div>
+
+        <div
+          class="container flex flex-col justify-center w-full min-h-screen px-6 py-10 mx-auto lg:absolute lg:inset-x-0 lg:px-44"
+        >
+          <h1
+            class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"
+          >
+            Checkout our <span class="text-red-700">new</span> <br />
+            shoe
+          </h1>
+
+          <div class="mt-10 lg:mt-20 lg:flex lg:items-center">
+            <img
+              id="secSecImg"
+              class="object-contain object-center w-full lg:w-[32rem] rounded-lg h-96"
+              src="assets/images/pngwing.com.png"
+              alt=""
+            />
+
+            <div class="mt-8 lg:px-10 lg:mt-0">
+              <h1
+                class="text-2xl font-semibold text-gray-800 dark:text-white lg:w-72"
+              >
+                Brand-New.
+              </h1>
+
+              <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                “Here we go with the new shoes in our store for the new year
+                2024. Featuring NewBalance”
+              </p>
+
+              <h3
+                id="shoeTitle"
+                class="mt-6 text-3xl md:text-5xl lg:text-7xl font-medium text-red-700"
+              >
+                The 400 Blows
+              </h3>
+            </div>
+          </div>
+
+          <div class="mt-10 mb-20 lg:mt-20 lg:flex lg:items-center">
+            <img
+              id="secSecImg"
+              class="object-contain object-center w-full lg:w-[32rem] rounded-lg h-96"
+              src="assets/images/pngegg (1).png"
+              alt=""
+            />
+
+            <div class="mt-8 lg:px-10 lg:mt-0">
+              <h1
+                class="text-2xl font-semibold text-gray-800 dark:text-white lg:w-72"
+              >
+                Brand-New.
+              </h1>
+
+              <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+                “Here we go with the new shoes in our store for the new year
+                2024. Featuring NewBalance”
+              </p>
+
+              <h3
+                id="shoeTitle"
+                class="mt-6 text-3xl md:text-5xl lg:text-7xl font-medium text-red-700"
+              >
+                The 400 Blows
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 lg:px-44 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div
+            class="lg:w-1/4 md:w-1/2 p-4 w-full hover:bg-slate-50 duration-500 ease-in-out hover:rounded-lg hover:shadow cursor-pointer"
+          >
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img
+                id="proShoeImg"
+                alt="ecommerce"
+                class="object-contain object-center w-full h-full block"
+                src="assets/images/pngegg (1).png"
+              />
+            </a>
+            <div class="mt-4">
+              <h2
+                id="proShoeTitle"
+                class="text-gray-900 title-font text-lg font-medium"
+              >
+                The Catalyzer
+              </h2>
+              <p class="mt-1">$16.00</p>
+            </div>
+          </div>
+          <div
+            class="lg:w-1/4 md:w-1/2 p-4 w-full hover:bg-slate-50 duration-500 ease-in-out hover:rounded-lg hover:shadow cursor-pointer"
+          >
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img
+                id="proShoeImg"
+                alt="ecommerce"
+                class="object-contain object-center w-full h-full block"
+                src="assets/images/pngegg (2).png"
+              />
+            </a>
+            <div class="mt-4">
+              <h2
+                id="proShoeTitle"
+                class="text-gray-900 title-font text-lg font-medium"
+              >
+                Shooting Stars
+              </h2>
+              <p class="mt-1">$21.15</p>
+            </div>
+          </div>
+          <div
+            class="lg:w-1/4 md:w-1/2 p-4 w-full hover:bg-slate-50 duration-500 ease-in-out hover:rounded-lg hover:shadow cursor-pointer"
+          >
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img
+                id="proShoeImg"
+                alt="ecommerce"
+                class="object-contain object-center w-full h-full block"
+                src="assets/images/pngegg (3).png"
+              />
+            </a>
+            <div class="mt-4">
+              <h2
+                id="proShoeTitle"
+                class="text-gray-900 title-font text-lg font-medium"
+              >
+                Neptune
+              </h2>
+              <p class="mt-1">$12.00</p>
+            </div>
+          </div>
+          <div
+            class="lg:w-1/4 md:w-1/2 p-4 w-full hover:bg-slate-50 duration-500 ease-in-out hover:rounded-lg hover:shadow cursor-pointer"
+          >
+            <a class="block relative h-48 rounded overflow-hidden">
+              <img
+                id="proShoeImg"
+                alt="ecommerce"
+                class="object-contain object-center w-full h-full block"
+                src="assets/images/pngwing.com.png"
+              />
+            </a>
+            <div class="mt-4">
+              <h2
+                id="proShoeTitle"
+                class="text-gray-900 title-font text-lg font-medium"
+              >
+                The 400 Blows
+              </h2>
+              <p class="mt-1">$18.40</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shoe Gallery -->
+    <section class="text-gray-600 body-font bg-zinc-100">
+      <div class="container px-28 py-24 mx-auto flex flex-wrap">
+        <div class="flex w-full mb-20 flex-wrap">
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4"
+          >
+            Our Gallery
+          </h1>
+        </div>
+        <div class="flex flex-wrap md:-m-2 -m-1">
+          <div class="flex flex-wrap w-1/2">
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                id="gallerypic1"
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="https://cdn.gobankingrates.com/wp-content/uploads/2019/07/sneakers-in-window-shop-iStock-958344442.jpg?webp=1&w=675&quality=75"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                id="gallerypic2"
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="https://scx2.b-cdn.net/gfx/news/2019/nikesplanfor.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-full">
+              <img
+                id="gallerypic3"
+                alt="gallery"
+                class="w-full h-full object-cover object-center block"
+                src="https://www.museumsassociation.org/app/uploads/2021/07/Shoe-Gallery-e1626190349834.jpg"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="md:p-2 p-1 w-full">
+              <img
+                id="gallerypic4"
+                alt="gallery"
+                class="w-full h-full object-cover object-center block"
+                src="https://www.retailnews.asia/wp-content/uploads/2018/10/Footlocker-shop-1280x763.jpg"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                id="gallerypic5"
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              />
+            </div>
+            <div class="md:p-2 p-1 w-1/2">
+              <img
+                id="gallerypic6"
+                alt="gallery"
+                class="w-full object-cover h-full object-center block"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmlrZSUyMHNob2VzfGVufDB8fDB8fHww&w=1000&q=80"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-screen bg-red-100"></div>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- icon js -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
